@@ -26,5 +26,7 @@
     "description": "Swivel Meta Test NFT. Claim yours today!",
     "image": "https://gateway.pinata.cloud/ipfs/QmesffeXGNsNtN8y81cFtozoLJ7eqBtUBEduEBrUcMZ73X",
     "name": "Swivel Meta Test",
-    "external_url": "https://www.swivelmeta.io"
+    "external_url": "https://www.swivelmeta.io",
+    "seller_fee_basis_points": 1000,
+    "fee_recipient": "0xA97F337c39cccE66adfeCB2BF99C1DdC54C2D721"
   }

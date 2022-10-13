@@ -16,7 +16,7 @@ contract ExampleNFT is ERC721URIStorage, Ownable {
     /**
      * @dev Creates a new NFT token.
      * @param recipient The address of the future owner of the token.
-     * @param tokenURI The token URI of the new NFT.
+     * @param tokenURI The IPFS URI/location for the metadata of the token.
      * @return newItemId The token id of the new NFT.
      */
     function mintNFT(address recipient, string memory tokenURI)
