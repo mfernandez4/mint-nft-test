@@ -4,7 +4,7 @@ const ethers = require('ethers');
 // Get Alchemy API URL from .env
 const API_KEY = process.env.API_KEY;
 
-const contract = require("../artifacts/contracts/ExampleNFT.sol/ExampleNFT.json");
+const contract = require("../artifacts/contracts/BatchExampleNFT.sol/BatchExampleNFT.json");
 // console.log(JSON.stringify(contract.abi));
 
 // Mint an NFT

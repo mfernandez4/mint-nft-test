@@ -11,9 +11,16 @@ async function main() {
   const BatchExampleNFT = await ethers.getContractFactory("BatchExampleNFT");
 
   // Start deployment, returning a promise that resolves to a contract object
-  const batchExampleNFT = await BatchExampleNFT.deploy(); // Instance of the contract
-  console.log("Contract deployed to address:", batchExampleNFT.address);
-  console.log(batchExampleNFT);
+  const batchExampleNFT = await BatchExampleNFT.deploy(25, 25); // Instance of the contract
+  await batchExampleNFT.deployed()
+  // This solves the bug in Mumbai network where the contract address is not the real one
+  const txHash = batchExampleNFT.deployTransaction.hash
+  const txReceipt = await ethers.provider.waitForTransaction(txHash)
+  const contractAddress = txReceipt.contractAddress
+  console.log("Contract deployed to address:", contractAddress)
+  // console.log("🚀 ~ file: deploy-batch.js ~ line 15 ~ main ~ batchExampleNFT", batchExampleNFT)
+  // console.log("🚀 ~ file: deploy-batch.js ~ line 19 ~ main ~ txReceipt", txReceipt)
+  console.log("🚀 ~ file: deploy-batch.js ~ line 18 ~ main ~ txHash", txHash)
   
 }
 
